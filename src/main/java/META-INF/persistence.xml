@@ -6,13 +6,15 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 <!-- The name of the persistence unit: here jpafishapp. This is used in the application code -->	
 	<persistence-unit name="jpafishapp">
 <!-- All the classes, which belong to the peristence unit and so can be persisted using JPA
-	Here there is just one: app.Fish. All the other should be added in the same way. -->	
+	Here there is just one: app.Fish. All the other should be added in the same way. 
+	
+	TÄHÄN LISÄTÄÄN KAIKKI LUOKAT, JOISSA JPA:ta HALUTAAN KÄYTTÄÄ -->	
 	<class>data.Fish</class>
 <!-- If using MySQL 5.7 or newer -->
 <!--  
 	as a root user in the MySQL command prompt give the commands:
 	use performance_schema; 
-	GRANT SELECT ON performance_schema.session_variables TO pena@localhost;
+	GRANT SELECT ON performance_schema.session_variables TO tomi@localhost;
 	
 	Change pena to the username you are using below in the property jdbc.user.
 	 -->		
@@ -25,7 +27,7 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
     <properties>
 	    <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 	    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpafishapp?useSSL=false" />
-	    <property name="javax.persistence.jdbc.user" value="pena" />
+	    <property name="javax.persistence.jdbc.user" value="eemi" />
 	    <property name="javax.persistence.jdbc.password" value="kukkuu" />
 	    <property name="eclipselink.ddl-generation" value="create-tables" />
 	</properties>
