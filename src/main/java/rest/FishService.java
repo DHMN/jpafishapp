@@ -26,6 +26,8 @@ import data.Fish;
 
 @Path("/fishservice")
 public class FishService {
+	
+	// TÄMÄ HAKEE TIETOKANTAYHTEYDEN PERSISTENCE.XML:stä
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpafishapp");
 
 	// TÄMÄ HAKEE KAIKKI KALAT
